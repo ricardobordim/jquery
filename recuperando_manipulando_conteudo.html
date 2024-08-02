@@ -12,8 +12,11 @@
 
 				console.log('conteúdo div 1: ', $('#div1').html())
 
-				console.log('conteúdo div 2: ', $('#div2').html())
+				// Alterando o conteúdo interno
+				console.log('conteúdo div 2: ', $('#div2').html('<strong style="color:red">Novo Atributo</strong>'))
 
+				// Alterando o texto
+				console.log('conteúdo div 2: ', $('#div3').text('<strong style="color:red">Novo Atributo</strong>'))
 			})
 
 		</script>
@@ -30,6 +33,10 @@
 
 		<div id="div2" style="border:solid 1px #000; width: 150px; height: 150px">
 			Div 2
+		</div>
+
+		<div id="div3" style="border:solid 1px #000; width: 150px; height: 150px">
+			Div 3
 		</div>
 
 	</body>

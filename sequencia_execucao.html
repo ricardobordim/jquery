@@ -12,6 +12,43 @@
 
 		<div id="exemplo">Teste</div>
 
+		<!-- 
+		   JS Puro onload="funcao()" ou window.onload= fucntion(){...}
+
+		   JQuery $(document).ready(function(){..}) ou $(fucntion(){...})
+		-->
+
+		<!-- Pela execução ser gravitacional, não funciona -->
+		<script>
+			function tt2(){
+				console.log($('#exemplo2'));
+			}
+			tt2();
+		</script>
+
+		<!-- Agora vai funcionar por usar função de callback-->
+		<script>
+			$(document).ready(function(){
+				function tt2() {
+					console.log($('#exemplo2'));
+				}
+				tt2();
+			})
+		</script>
+
+		<!-- Outra forma de fazer o mesmo que foi feito acima -->
+		<script>
+			function tt3() {
+					console.log($('#exemplo2'));
+			}
+			// Passada a função como parâmetro
+			$(tt3);
+
+		</script>
+
+
+		<div id="exemplo2">Teste 2</div>
+
 	</body>
 
 	

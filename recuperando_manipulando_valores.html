@@ -7,9 +7,25 @@
 		<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 		<script>
 
+			
+
 			$(document).ready(() => {
 				
-				
+				// Não funciona por aqui, somente através de eventos, então
+				// utilizar no console.
+				console.log($('#nome').val())
+
+				// Posso incluir um valor no campo
+				console.log($('#nome').val('Ricardo'));
+
+
+				// Para saber qual foi chegado, retornando todos
+				$('.sexo:checked');
+
+				// Retorna somente o primeiro valor do chegad
+				$('.sexo:checked').val();
+
+
 				$.each($('.interesse:checked'), (indice, valor) => {
 					console.log(indice, valor.value)
 				})
